@@ -1,7 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>W3.CSS Template</title>
+
+<style> 
+    #rcorners1 {
+        border-radius: 10px;
+        background: #434343;
+        padding: 13px; 
+        width: 100px;
+        height: 50px;  
+    }
+</style>
+<style>
+    #wrapper {
+        overflow: auto; /* add this to contain floated children */
+    }
+    #first {
+        float:left; /* add this */
+    }
+    #second {
+        float: right; /* add this */
+    }
+</style>
+
+<title> Lennert De Smet </title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -42,11 +64,39 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     <div class="w3-content w3-justify w3-text w3-padding-64" id="about"></divclass>
         <h2 class="w3-text-light-grey"> Publications </h2>
     <hr style="width:200px" class="w3-opacity">
+    <h3 class="w3-text-light-grey"> Workshop Papers</h3>
+
+    <div id="wrapper">
+        <div id="first">
+            <p>
+                De Smet, L., Manhaeve, R., Marra, G., Zuidberg Dos Martires, P. (2022). 
+                <em>Tensorised Probabilistic Inference for Neural Probabilistic Logic Programming.</em>
+                In the 5th Workshop on Tractable Probabilistic Modeling (TPM 2022).
+            </p>
+        </div>
+        <div id="second">
+            <p id="rcorners1" style="text-align:center;"> <b> <a href="https://openreview.net/pdf?id=6Kpbq2Y2IK6"> Paper </a> </b> </p>
+        </div>
+    </div>
+
+    <h3 class="w3-text-light-grey"> Preprints </h3>
+    <div id="wrapper">
+        <div id="first">
+            <p>
+                De Smet, L., Zuidberg Dos Martires, P., Manhaeve, R., Marra, G., Kimmig, A., De Raedt, L.  (2022). 
+                <em> Neural Probilistic Logic Programming in Discrete-Continuous Domains.</em>
+                arXiv. doi: 10.48550/arXiv.2303.04660.
+            </p>
+        </div>
+        <div id="second">
+            <p id="rcorners1" style="text-align:center;"> <b> <a href="https://arxiv.org/pdf/2303.04660.pdf"> Paper </a> </b> </p>
+        </div>
+    </div>
 </div>
 
     <!-- Footer -->
   <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
-    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <a href="https://twitter.com/LennertDS_" <i class="fa fa-twitter w3-hover-opacity"></i><a/>
     <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">w3.css</a></p>
   <!-- End footer -->
   </footer>
