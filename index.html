@@ -1,342 +1,480 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 
-<style> 
-    #rcorners1 {
-        border-radius: 10px;
-        background: #434343;
-        padding: 13px; 
-        width: 100px;
-        height: 50px;  
-    }
-</style>
+    <style>
+        #rcorners1 {
+            border-radius: 10px;
+            background: #434343;
+            padding: 13px;
+            width: 100px;
+            height: 50px;
+        }
+    </style>
 
-<style>
-    a:hover {
-    color: #277da1;
-    }
-</style>
+    <style>
+        a:hover {
+            color: #277da1;
+        }
+    </style>
 
-<style>
-    #wrapper {
-        overflow: auto; /* add this to contain floated children */
-    }
-    #first {
-        float:left; /* add this */
-    }
-    #second {
-        float: right; /* add this */
-    }
-    #background {
-        color: #efefef;
-        background-color: #111111;
-    }
-</style>
+    <style>
+        #wrapper {
+            overflow: auto;
+            /* add this to contain floated children */
+        }
 
-<style>
-    img {
-      border-radius: 2em;
-    }
-</style>
+        #first {
+            float: left;
+            /* add this */
+        }
 
-<link rel="icon" href="/images/wave.png">
+        #second {
+            float: right;
+            /* add this */
+        }
 
-<title> Lennert De Smet </title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Sans">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-<style>
-    body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
-    /* body, h1,h2,h3,h4,h5,h6 {font-family: "Fira Sans"} */
-    .w3-row-padding img {margin-bottom: 12px}
-    /* Set the width of the sidebar to 120px */
-    .w3-sidebar {width: 120px;background: #222;}
-    /* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
-    /* Remove margins from "page content" on small screens */
-    @media only screen and (max-width: 600px) {
-        #main {margin-left: 0}
-        #background {background-color: #000000;}
-    }
-</style>
+        #background {
+            color: #efefef;
+            background-color: #111111;
+        }
+    </style>
+
+    <style>
+        img {
+            border-radius: 2em;
+        }
+    </style>
+
+    <link rel="icon" href="/images/wave.png">
+
+    <title> Lennert De Smet </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Sans">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "Montserrat", sans-serif
+        }
+
+        /* body, h1,h2,h3,h4,h5,h6 {font-family: "Fira Sans"} */
+        .w3-row-padding img {
+            margin-bottom: 12px
+        }
+
+        /* Set the width of the sidebar to 120px */
+        .w3-sidebar {
+            width: 120px;
+            background: #222;
+        }
+
+        /* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+        /* Remove margins from "page content" on small screens */
+        @media only screen and (max-width: 600px) {
+            #main {
+                margin-left: 0
+            }
+
+            #background {
+                background-color: #000000;
+            }
+        }
+    </style>
 </head>
+
 <body id="background">
 
-<!-- Page Content -->
-<div class="w3-padding-large" id="main">
-  <!-- Header/Home -->
-  <header class="w3-container w3-padding-32 w3-center" id="home">
-    <h1> Lennert De Smet </h1>
-    <p style="padding-bottom:20px;"> PhD at the DTAI research group of the KU Leuven.</p>
-    <img src="/images/cropped_me.jpg" class="w3-image" width="500">
-  </header>
+    <!-- Page Content -->
+    <div class="w3-padding-large" id="main">
+        <!-- Header/Home -->
+        <header class="w3-container w3-padding-32 w3-center" id="home">
+            <h1> Lennert De Smet </h1>
+            <p style="padding-bottom:20px;"> PhD at the DTAI research group of the KU Leuven.</p>
+            <img src="/images/cropped_me.jpg" class="w3-image" width="500">
+        </header>
 
-  <!-- About Section -->
-  <div class="w3-content w3-justify w3-text w3-padding-64" id="about">
-    <h2 class="w3-text-light-grey"> About Me </h2>
-    <hr style="width:200px" class="w3-opacity">
-    <p>
-        Having studied and enjoyed many different forms of mathematics, from statistics and analysis to formal logic and abstract algebra, my lifelong interest in modelling intelligence naturally pulled me to the field of AI.
-        In pursuit of this passion, I am now a fourth year PhD student at the DTAI research group of the KU Leuven under the supervision of professor Luc De Raedt.
-        My research interests are mainly related to neurosymbolic AI (NeSy). 
-        More specifically, they are located at the intersection of statistics, logic and optimisation.
-        Currently, my research is focused on improving the scalability of probabilistic NeSy methods, both for exact and approximate inference and learning.
-        <!-- through sampling and gradient estimation applied to hybrid (discrete + continuous) probabilistic logic. -->
-    </p>
-
-    <div class="w3-content w3-justify w3-text w3-padding-64" id="publications"></divclass>
-
-    <h2 class="w3-text-light-grey"> Publications </h2>
-    <hr style="width:200px" class="w3-opacity">
-
-    <h3 class="w3-text-light-grey" style="text-align:left;"> Conference Papers </h3>
-    <div id="wrapper">
-        <div id="first">
+        <!-- About Section -->
+        <div class="w3-content w3-justify w3-text w3-padding-64" id="about">
+            <h2 class="w3-text-light-grey"> About Me </h2>
+            <hr style="width:200px" class="w3-opacity">
             <p>
-                De Smet, L., 
-                <a href="https://pedrozudo.github.io/" style="text-decoration: none"> Zuidberg Dos Martires, P.</a>, 
-                <a href="https://people.cs.kuleuven.be/~robin.manhaeve/" style="text-decoration: none"> Manhaeve, R.</a>, 
-                <a href="https://www.giuseppemarra.com/" style="text-decoration: none"> Marra, G.</a>, 
-                <a href="https://people.cs.kuleuven.be/~angelika.kimmig/" style="text-decoration: none"> Kimmig, A.</a>, 
-                <a href="https://wms.cs.kuleuven.be/people/lucderaedt/" style="text-decoration: none"> De Raedt, L.</a>
-                (2023). 
-                <em> Neural Probilistic Logic Programming in Discrete-Continuous Domains.</em>
-                In Proceedings of the 39th Conference on Uncertainty in Artificial Intelligence (UAI).
+                Having studied and enjoyed many different forms of mathematics, from statistics and analysis to formal
+                logic and abstract algebra, my lifelong interest in modelling intelligence naturally pulled me to the
+                field of AI.
+                In pursuit of this passion, I graduated as a PhD student in 2025 at the DTAI research group of the KU
+                Leuven under the supervision of professor Luc De Raedt.
+                Right now, I am a postdoc at the same research group.
+                My research focuses on anything probabilistic and neurosymbolic (NeSy).
+                More specifically, it is located at the intersection of statistics, logic and optimisation.
+                My research is focused on improving the scalability of probabilistic NeSy methods, both for
+                exact and approximate inference and learning.
             </p>
-        </div>
-        <div id="second">
-            <a href="https://proceedings.mlr.press/v216/de-smet23a/de-smet23a.pdf" style="text-decoration: none"><p id="rcorners1" style="text-align:center;"> <b> 
-                <i class="fa-regular fa-file-pdf w3-hover-opacity"></i> Paper </b> </p> </a>
-        </div>
-        <div id="second">
-            <a style="text-decoration: none"><p style="text-align:center;"> <b> &nbsp &nbsp </b> </p> </a>
-        </div>
-        <div id="second">
-            <a href="https://www.youtube.com/watch?v=eqWOMycQOk4&t=1s" style="text-decoration: none"><p id="rcorners1" style="text-align:center;"> <b> 
-                <i class="fa-regular fa-circle-play w3-hover-opacity"></i> Video </b> </p> </a>
-        </div>
-        <!-- <div id="second">
-            <a style="text-decoration: none"><p style="text-align:center;"> <b> &nbsp &nbsp </b> </p> </a>
-        </div>
-        <div id="second">
-            <a href="https://www.auai.org/uai2023/oral_slides/233-oral-slides.pdf" style="text-decoration: none"><p id="rcorners1" style="text-align:center;"> <b> Slides </b> </p> </a>
-        </div> -->
-        <div id="second">
-            <a style="text-decoration: none"><p style="text-align:center;"> <b> &nbsp &nbsp </b> </p> </a>
-        </div>
-        <div id="second">
-            <a href="https://github.com/ML-KULeuven/deepseaproblog" style="text-decoration: none"><p id="rcorners1" style="text-align:center;"> <b> 
-                <i class="fa-brands fa-github w3-hover-opacity"></i> Code </b> </p> </a>
-        </div>
-    </div>
 
-    <div id="wrapper">
-        <div id="first">
-            <p>
-                De Smet, L., 
-                <a href="https://emsansone.github.io/" style="text-decoration: none"> Sansone, E.</a>,
-                <a href="https://pedrozudo.github.io/" style="text-decoration: none"> Zuidberg Dos Martires, P.</a>
-                (2023). 
-                <em> Differentiable Sampling of Categorical Distributions Using the CatLog-Derivative Trick.</em>
-                In Proceedings of the 37th International Conference on Neural Information Processing Systems (NeurIPS).
-            </p>
-        </div>
-        <div id="second">
-            <a href="https://proceedings.neurips.cc/paper_files/paper/2023/file/61202bb341e7e0a6026ea134a5057abf-Paper-Conference.pdf" style="text-decoration: none"><p id="rcorners1" style="text-align:center;"> <b> 
-                <i class="fa-regular fa-file-pdf w3-hover-opacity"></i> Paper </b> </p> </a>
-        </div>
-        <div id="second">
-            <a style="text-decoration: none"><p style="text-align:center;"> <b> &nbsp &nbsp </b> </p> </a>
-        </div>
-        <div id="second">
-            <a href="https://neurips.cc/virtual/2023/poster/72541" style="text-decoration: none"><p id="rcorners1" style="text-align:center;"> <b> 
-                <i class="fa-regular fa-circle-play w3-hover-opacity"></i> Media </b> </p> </a>
-        </div>
-        <div id="second">
-            <a style="text-decoration: none"><p style="text-align:center;"> <b> &nbsp &nbsp </b> </p> </a>
-        </div>
-        <div id="second">
-            <a href="https://github.com/ML-KULeuven/catlog" style="text-decoration: none"><p id="rcorners1" style="text-align:center;"> <b> 
-                <i class="fa-brands fa-github w3-hover-opacity"></i> Code </b> </p> </a>
-        </div>
-    </div>
+            <div class="w3-content w3-justify w3-text w3-padding-64" id="publications">
+                </divclass>
 
-    <div id="wrapper">
-        <div id="first">
-            <p>
-                Verreet, V.,
-                De Smet, L.,
-                <a href="https://wms.cs.kuleuven.be/people/lucderaedt/" style="text-decoration: none"> De Raedt, L.</a>,
-                <a href="https://emsansone.github.io/" style="text-decoration: none"> Sansone, E.</a>
-                (2024). 
-                <em> EXPLAIN, AGREE, LEARN: Scaling Learning for Neural Probabilistic Logic.</em>
-                ECAI 2024.
-            </p>
-        </div>
-        <div id="second">
-            <a href="https://arxiv.org/pdf/2408.08133" style="text-decoration: none"><p id="rcorners1" style="text-align:center;"> <b> 
-                <i class="fa-regular fa-file-pdf w3-hover-opacity"></i> Paper </b> </p> </a>
-        </div>
-    </div>
+                <h2 class="w3-text-light-grey"> Publications </h2>
+                <hr style="width:200px" class="w3-opacity">
 
-    <div id="wrapper">
-        <div id="first">
-            <p>
-                De Smet, L., 
-                <a href="https://pedrozudo.github.io/" style="text-decoration: none"> Zuidberg Dos Martires, P.</a>
-                (2024). 
-                <em> A Fast Convoluted Story: Scaling Probabilistic Inference for Integer Arithmetic.</em>
-                In Proceedings of the 38th International Conference on Neural Information Processing Systems (NeurIPS).
-            </p>
-        </div>
-        <div id="second">
-            <a href="https://proceedings.neurips.cc/paper_files/paper/2024/file/b9a17133e3943509243b5e197c1c23b2-Paper-Conference.pdf" style="text-decoration: none"><p id="rcorners1" style="text-align:center;"> <b> 
-                <i class="fa-regular fa-file-pdf w3-hover-opacity"></i> Paper </b> </p> </a>
-        </div>
-        <div id="second">
-            <a style="text-decoration: none"><p style="text-align:center;"> <b> &nbsp &nbsp </b> </p> </a>
-        </div>
-        <div id="second">
-            <a href="https://neurips.cc/virtual/2024/poster/95376" style="text-decoration: none"><p id="rcorners1" style="text-align:center;"> <b> 
-                <i class="fa-regular fa-circle-play w3-hover-opacity"></i> Media </b> </p> </a>
-        </div>
-        <div id="second">
-            <a style="text-decoration: none"><p style="text-align:center;"> <b> &nbsp &nbsp </b> </p> </a>
-        </div>
-        <div id="second">
-            <a href="https://github.com/ML-KULeuven/probabilistic-arithmetic" style="text-decoration: none"><p id="rcorners1" style="text-align:center;"> <b> 
-                <i class="fa-brands fa-github w3-hover-opacity"></i> Code </b> </p> </a>
-        </div>
-    </div>
+                <h3 class="w3-text-light-grey" style="text-align:left;"> Conference Papers </h3>
+                <div id="wrapper">
+                    <div id="first">
+                        <p>
+                            De Smet, L.,
+                            <a href="https://pedrozudo.github.io/" style="text-decoration: none"> Zuidberg Dos Martires,
+                                P.</a>,
+                            <a href="https://people.cs.kuleuven.be/~robin.manhaeve/" style="text-decoration: none">
+                                Manhaeve, R.</a>,
+                            <a href="https://www.giuseppemarra.com/" style="text-decoration: none"> Marra, G.</a>,
+                            <a href="https://people.cs.kuleuven.be/~angelika.kimmig/" style="text-decoration: none">
+                                Kimmig, A.</a>,
+                            <a href="https://wms.cs.kuleuven.be/people/lucderaedt/" style="text-decoration: none"> De
+                                Raedt, L.</a>
+                            (2023).
+                            <em> Neural Probilistic Logic Programming in Discrete-Continuous Domains.</em>
+                            In Proceedings of the 39th Conference on Uncertainty in Artificial Intelligence (UAI).
+                        </p>
+                    </div>
+                    <div id="second">
+                        <a href="https://proceedings.mlr.press/v216/de-smet23a/de-smet23a.pdf"
+                            style="text-decoration: none">
+                            <p id="rcorners1" style="text-align:center;"> <b>
+                                    <i class="fa-regular fa-file-pdf w3-hover-opacity"></i> Paper </b> </p>
+                        </a>
+                    </div>
+                    <div id="second">
+                        <a style="text-decoration: none">
+                            <p style="text-align:center;"> <b> &nbsp &nbsp </b> </p>
+                        </a>
+                    </div>
+                    <div id="second">
+                        <a href="https://www.youtube.com/watch?v=eqWOMycQOk4&t=1s" style="text-decoration: none">
+                            <p id="rcorners1" style="text-align:center;"> <b>
+                                    <i class="fa-regular fa-circle-play w3-hover-opacity"></i> Video </b> </p>
+                        </a>
+                    </div>
+                    <div id="second">
+                        <a style="text-decoration: none">
+                            <p style="text-align:center;"> <b> &nbsp &nbsp </b> </p>
+                        </a>
+                    </div>
+                    <div id="second">
+                        <a href="https://github.com/ML-KULeuven/deepseaproblog" style="text-decoration: none">
+                            <p id="rcorners1" style="text-align:center;"> <b>
+                                    <i class="fa-brands fa-github w3-hover-opacity"></i> Code </b> </p>
+                        </a>
+                    </div>
+                </div>
 
-    <div id="wrapper">
-        <div id="first">
-            <p>
-                De Smet, L.,
-                <a href="https://gabventurato.github.io/" style="text-decoration: none"> Venturato, G.</a>,
-                <a href="https://wms.cs.kuleuven.be/people/lucderaedt/" style="text-decoration: none"> De Raedt, L.</a>,
-                <a href="https://www.giuseppemarra.com/" style="text-decoration: none"> Marra, G.</a>
-                (2025). 
-                <em> Relational Neurosymbolic Markov Models.</em>
-                In Proceedings of the 39th Annual AAAI Conference on Artificial Intelligence.
-            </p>
-        </div>
-        <div id="second">
-            <a href="https://arxiv.org/pdf/2412.13023" style="text-decoration: none"><p id="rcorners1" style="text-align:center;"> <b> 
-                <i class="fa-regular fa-file-pdf w3-hover-opacity"></i> Paper </b> </p> </a>
-        </div>
-        <!-- <div id="second">
-            <a style="text-decoration: none"><p style="text-align:center;"> <b> &nbsp &nbsp </b> </p> </a>
-        </div> -->
-        <!-- <div id="second">
-            <a href="https://www.youtube.com/watch?v=eqWOMycQOk4&t=1s" style="text-decoration: none"><p id="rcorners1" style="text-align:center;"> <b> 
-                <i class="fa-regular fa-circle-play w3-hover-opacity"></i> Video </b> </p> </a>
-        </div> -->
-        <!-- <div id="second">
-            <a style="text-decoration: none"><p style="text-align:center;"> <b> &nbsp &nbsp </b> </p> </a>
-        </div>
-        <div id="second">
-            <a href="https://www.auai.org/uai2023/oral_slides/233-oral-slides.pdf" style="text-decoration: none"><p id="rcorners1" style="text-align:center;"> <b> Slides </b> </p> </a>
-        </div> -->
-        <div id="second">
-            <a style="text-decoration: none"><p style="text-align:center;"> <b> &nbsp &nbsp </b> </p> </a>
-        </div>
-        <div id="second">
-            <a href="https://github.com/ML-KULeuven/nesy-mm" style="text-decoration: none"><p id="rcorners1" style="text-align:center;"> <b> 
-                <i class="fa-brands fa-github w3-hover-opacity"></i> Code </b> </p> </a>
-        </div>
-    </div>
+                <div id="wrapper">
+                    <div id="first">
+                        <p>
+                            De Smet, L.,
+                            <a href="https://emsansone.github.io/" style="text-decoration: none"> Sansone, E.</a>,
+                            <a href="https://pedrozudo.github.io/" style="text-decoration: none"> Zuidberg Dos Martires,
+                                P.</a>
+                            (2023).
+                            <em> Differentiable Sampling of Categorical Distributions Using the CatLog-Derivative
+                                Trick.</em>
+                            In Proceedings of the 37th International Conference on Neural Information Processing Systems
+                            (NeurIPS).
+                        </p>
+                    </div>
+                    <div id="second">
+                        <a href="https://proceedings.neurips.cc/paper_files/paper/2023/file/61202bb341e7e0a6026ea134a5057abf-Paper-Conference.pdf"
+                            style="text-decoration: none">
+                            <p id="rcorners1" style="text-align:center;"> <b>
+                                    <i class="fa-regular fa-file-pdf w3-hover-opacity"></i> Paper </b> </p>
+                        </a>
+                    </div>
+                    <div id="second">
+                        <a style="text-decoration: none">
+                            <p style="text-align:center;"> <b> &nbsp &nbsp </b> </p>
+                        </a>
+                    </div>
+                    <div id="second">
+                        <a href="https://neurips.cc/virtual/2023/poster/72541" style="text-decoration: none">
+                            <p id="rcorners1" style="text-align:center;"> <b>
+                                    <i class="fa-regular fa-circle-play w3-hover-opacity"></i> Media </b> </p>
+                        </a>
+                    </div>
+                    <div id="second">
+                        <a style="text-decoration: none">
+                            <p style="text-align:center;"> <b> &nbsp &nbsp </b> </p>
+                        </a>
+                    </div>
+                    <div id="second">
+                        <a href="https://github.com/ML-KULeuven/catlog" style="text-decoration: none">
+                            <p id="rcorners1" style="text-align:center;"> <b>
+                                    <i class="fa-brands fa-github w3-hover-opacity"></i> Code </b> </p>
+                        </a>
+                    </div>
+                </div>
 
-    <h3 class="w3-text-light-grey" style="text-align:left;"> Workshop Papers</h3>
+                <div id="wrapper">
+                    <div id="first">
+                        <p>
+                            Verreet, V.,
+                            De Smet, L.,
+                            <a href="https://wms.cs.kuleuven.be/people/lucderaedt/" style="text-decoration: none"> De
+                                Raedt, L.</a>,
+                            <a href="https://emsansone.github.io/" style="text-decoration: none"> Sansone, E.</a>
+                            (2024).
+                            <em> EXPLAIN, AGREE, LEARN: Scaling Learning for Neural Probabilistic Logic.</em>
+                            ECAI 2024.
+                        </p>
+                    </div>
+                    <div id="second">
+                        <a href="https://arxiv.org/pdf/2408.08133" style="text-decoration: none">
+                            <p id="rcorners1" style="text-align:center;"> <b>
+                                    <i class="fa-regular fa-file-pdf w3-hover-opacity"></i> Paper </b> </p>
+                        </a>
+                    </div>
+                </div>
 
-    <div id="wrapper">
-        <div id="first">
-            <p>
-                De Smet, L., 
-                <a href="https://people.cs.kuleuven.be/~robin.manhaeve/" style="text-decoration: none"> Manhaeve, R.</a>, 
-                <a href="https://www.giuseppemarra.com/" style="text-decoration: none"> Marra, G.</a>, 
-                <a href="https://pedrozudo.github.io/" style="text-decoration: none"> Zuidberg Dos Martires, P.</a>
-                (2022). 
-                <em> Tensorised Probabilistic Inference for Neural Probabilistic Logic Programming.</em>
-                In the 5th Workshop on Tractable Probabilistic Modeling (TPM).
-            </p>
-        </div>
-        <div id="second">
-            <a href="https://openreview.net/pdf?id=6Kpbq2Y2IK6" style="text-decoration: none"><p id="rcorners1" style="text-align:center;"> <b> 
-                <i class="fa-regular fa-file-pdf w3-hover-opacity"></i> Paper </b> </p> </a>
-        </div>
-    </div>
+                <div id="wrapper">
+                    <div id="first">
+                        <p>
+                            De Smet, L.,
+                            <a href="https://pedrozudo.github.io/" style="text-decoration: none"> Zuidberg Dos Martires,
+                                P.</a>
+                            (2024).
+                            <em> A Fast Convoluted Story: Scaling Probabilistic Inference for Integer Arithmetic.</em>
+                            In Proceedings of the 38th International Conference on Neural Information Processing Systems
+                            (NeurIPS).
+                        </p>
+                    </div>
+                    <div id="second">
+                        <a href="https://proceedings.neurips.cc/paper_files/paper/2024/file/b9a17133e3943509243b5e197c1c23b2-Paper-Conference.pdf"
+                            style="text-decoration: none">
+                            <p id="rcorners1" style="text-align:center;"> <b>
+                                    <i class="fa-regular fa-file-pdf w3-hover-opacity"></i> Paper </b> </p>
+                        </a>
+                    </div>
+                    <div id="second">
+                        <a style="text-decoration: none">
+                            <p style="text-align:center;"> <b> &nbsp &nbsp </b> </p>
+                        </a>
+                    </div>
+                    <div id="second">
+                        <a href="https://neurips.cc/virtual/2024/poster/95376" style="text-decoration: none">
+                            <p id="rcorners1" style="text-align:center;"> <b>
+                                    <i class="fa-regular fa-circle-play w3-hover-opacity"></i> Media </b> </p>
+                        </a>
+                    </div>
+                    <div id="second">
+                        <a style="text-decoration: none">
+                            <p style="text-align:center;"> <b> &nbsp &nbsp </b> </p>
+                        </a>
+                    </div>
+                    <div id="second">
+                        <a href="https://github.com/ML-KULeuven/probabilistic-arithmetic" style="text-decoration: none">
+                            <p id="rcorners1" style="text-align:center;"> <b>
+                                    <i class="fa-brands fa-github w3-hover-opacity"></i> Code </b> </p>
+                        </a>
+                    </div>
+                </div>
 
-    <div id="wrapper">
-        <div id="first">
-            <p>
-                <a href="https://www.kuleuven.be/wieiswie/nl/person/00118567" style="text-decoration: none"> Verreet, V.</a>, 
-                De Smet, L.,
-                <a href="https://people.cs.kuleuven.be/~robin.manhaeve/" style="text-decoration: none"> Manhaeve, R.</a>,
-                <a href="https://pieter.ai/" style="text-decoration: none"> Delobelle, P.</a>,
-                <a href="https://jessa.github.io/" style="text-decoration: none"> Bekker, J.</a>,
-                (2023). 
-                <em> Inferring Missing CV Skills using PU Learning and Variational Inference.</em>
-                In the ECML-PKDD 2023 International workshop on AI for Human Resources and Public Employment Services.
-            </p>
-        </div>
-        <div id="second">
-            <a href="https://ai4hrpes.github.io/ecmlpkdd2023/papers/ai4hrpes2023_paper_152.pdf" style="text-decoration: none"><p id="rcorners1" style="text-align:center;"> <b> 
-                <i class="fa-regular fa-file-pdf w3-hover-opacity"></i> Paper </b> </p> </a>
-        </div>
-    </div>
+                <div id="wrapper">
+                    <div id="first">
+                        <p>
+                            De Smet, L.,
+                            <a href="https://gabventurato.github.io/" style="text-decoration: none"> Venturato, G.</a>,
+                            <a href="https://wms.cs.kuleuven.be/people/lucderaedt/" style="text-decoration: none"> De
+                                Raedt, L.</a>,
+                            <a href="https://www.giuseppemarra.com/" style="text-decoration: none"> Marra, G.</a>
+                            (2025).
+                            <em> Relational Neurosymbolic Markov Models.</em>
+                            In Proceedings of the 39th Annual AAAI Conference on Artificial Intelligence.
+                        </p>
+                    </div>
+                    <div id="second">
+                        <a href="https://arxiv.org/pdf/2412.13023" style="text-decoration: none">
+                            <p id="rcorners1" style="text-align:center;"> <b>
+                                    <i class="fa-regular fa-file-pdf w3-hover-opacity"></i> Paper </b> </p>
+                        </a>
+                    </div>
+                    <div id="second">
+                        <a style="text-decoration: none">
+                            <p style="text-align:center;"> <b> &nbsp &nbsp </b> </p>
+                        </a>
+                    </div>
+                    <div id="second">
+                        <a href="https://github.com/ML-KULeuven/nesy-mm" style="text-decoration: none">
+                            <p id="rcorners1" style="text-align:center;"> <b>
+                                    <i class="fa-brands fa-github w3-hover-opacity"></i> Code </b> </p>
+                        </a>
+                    </div>
+                </div>
 
-    <div id="wrapper">
-        <div id="first">
-            <p>
-                De Smet, L.,
-                <a href="https://gabventurato.github.io/" style="text-decoration: none"> Venturato, G.</a>,
-                <a href="https://www.giuseppemarra.com/" style="text-decoration: none"> Marra, G.</a>, 
-                <a href="https://wms.cs.kuleuven.be/people/lucderaedt/" style="text-decoration: none"> De Raedt, L.</a>,
-                (2024). 
-                <em> Neurosymbolic Markov Models.</em>
-                In the ICML 2024 Workshop on Structured Probabilistic Inference & Generative Modeling (SPIGM 2024).
-            </p>
-        </div>
-        <div id="second">
-            <a href="https://openreview.net/pdf?id=epOXthx0ea" style="text-decoration: none"><p id="rcorners1" style="text-align:center;"> <b> 
-                <i class="fa-regular fa-file-pdf w3-hover-opacity"></i> Paper </b> </p> </a>
-        </div>
-    </div>
+                <h3 class="w3-text-light-grey" style="text-align:left;"> Preprints </h3>
 
-    <!-- <div id="wrapper">
-        <div id="first">
-            <p>
-                De Smet, L., 
-                <a href="https://emsansone.github.io/" style="text-decoration: none"> Sansone, E.</a>,
-                <a href="https://pedrozudo.github.io/" style="text-decoration: none"> Zuidberg Dos Martires, P.</a>
-                (2023). 
-                <em> Differentiable Sampling of Categorical Distributions Using the CatLog-Derivative Trick.</em>
-                In the ICML 2023 Workshop Differentiable Almost Everything: Differentiable Relaxations, Algorithms, Operators, and Simulators.
-            </p>
+                <div id="wrapper">
+                    <div id="first">
+                        <p>
+                            De Smet, L.,
+                            <a href="https://wms.cs.kuleuven.be/people/lucderaedt/" style="text-decoration: none">
+                                De Raedt, L.
+                            </a>
+                            <em>
+                                Defining neurosymbolic AI.
+                            </em>
+                        </p>
+                    </div>
+                    <div id="second">
+                        <a href="https://arxiv.org/abs/2507.11127" style="text-decoration: none">
+                            <p id="rcorners1" style="text-align:center;"> <b>
+                                    <i class="fa-regular fa-file-pdf w3-hover-opacity"></i> Paper
+                                </b>
+                            </p>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="wrapper">
+                    <div id="first">
+                        <p>
+                            <a href="https://vincentderk.github.io/" style="text-decoration: none">
+                                Derkinderen, V.
+                            </a>,
+                            <a href="https://people.cs.kuleuven.be/~robin.manhaeve/" style="text-decoration: none">
+                                Manhaeve, R.
+                            </a>,
+                            <a href="https://www.kuleuven.be/wieiswie/en/person/00168703" style="text-decoration: none">
+                                Adriaensen, R.
+                            </a>,
+                            <a href="https://www.kuleuven.be/wieiswie/en/person/00160543" style="text-decoration: none">
+                                Van Praet, L.
+                            </a>,
+                            De Smet, L.,
+                            <a href="https://www.giuseppemarra.com/" style="text-decoration: none">
+                                Marra, G.
+                            </a>,
+                            <a href="https://wms.cs.kuleuven.be/people/lucderaedt/" style="text-decoration: none">
+                                De Raedt, L.
+                            </a>
+                            <em>
+                                The DeepLog Neurosymbolic Machine.
+                            </em>
+                        </p>
+                    </div>
+                    <div id="second">
+                        <a href="https://arxiv.org/abs/2508.13697" style="text-decoration: none">
+                            <p id="rcorners1" style="text-align:center;"> <b>
+                                    <i class="fa-regular fa-file-pdf w3-hover-opacity"></i> Paper
+                                </b>
+                            </p>
+                        </a>
+                    </div>
+                </div>
+
+
+                <h3 class="w3-text-light-grey" style="text-align:left;"> Workshop Papers</h3>
+
+                <div id="wrapper">
+                    <div id="first">
+                        <p>
+                            De Smet, L.,
+                            <a href="https://people.cs.kuleuven.be/~robin.manhaeve/" style="text-decoration: none">
+                                Manhaeve, R.</a>,
+                            <a href="https://www.giuseppemarra.com/" style="text-decoration: none"> Marra,
+                                G.</a>,
+                            <a href="https://pedrozudo.github.io/" style="text-decoration: none"> Zuidberg Dos Martires,
+                                P.</a>
+                            (2022).
+                            <em> Tensorised Probabilistic Inference for Neural Probabilistic Logic
+                                Programming.</em>
+                            In the 5th Workshop on Tractable Probabilistic Modeling (TPM).
+                        </p>
+                    </div>
+                    <div id="second">
+                        <a href="https://openreview.net/pdf?id=6Kpbq2Y2IK6" style="text-decoration: none">
+                            <p id="rcorners1" style="text-align:center;"> <b>
+                                    <i class="fa-regular fa-file-pdf w3-hover-opacity"></i> Paper </b> </p>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="wrapper">
+                    <div id="first">
+                        <p>
+                            <a href="https://www.kuleuven.be/wieiswie/nl/person/00118567" style="text-decoration: none">
+                                Verreet, V.</a>,
+                            De Smet, L.,
+                            <a href="https://people.cs.kuleuven.be/~robin.manhaeve/" style="text-decoration: none">
+                                Manhaeve, R.</a>,
+                            <a href="https://pieter.ai/" style="text-decoration: none"> Delobelle, P.</a>,
+                            <a href="https://jessa.github.io/" style="text-decoration: none"> Bekker,
+                                J.</a>,
+                            (2023).
+                            <em> Inferring Missing CV Skills using PU Learning and Variational
+                                Inference.</em>
+                            In the ECML-PKDD 2023 International workshop on AI for Human Resources and
+                            Public
+                            Employment
+                            Services.
+                        </p>
+                    </div>
+                    <div id="second">
+                        <a href="https://ai4hrpes.github.io/ecmlpkdd2023/papers/ai4hrpes2023_paper_152.pdf"
+                            style="text-decoration: none">
+                            <p id="rcorners1" style="text-align:center;"> <b>
+                                    <i class="fa-regular fa-file-pdf w3-hover-opacity"></i> Paper </b> </p>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="wrapper">
+                    <div id="first">
+                        <p>
+                            De Smet, L.,
+                            <a href="https://gabventurato.github.io/" style="text-decoration: none">
+                                Venturato,
+                                G.</a>,
+                            <a href="https://www.giuseppemarra.com/" style="text-decoration: none"> Marra,
+                                G.</a>,
+                            <a href="https://wms.cs.kuleuven.be/people/lucderaedt/" style="text-decoration: none"> De
+                                Raedt, L.</a>,
+                            (2024).
+                            <em> Neurosymbolic Markov Models.</em>
+                            In the ICML 2024 Workshop on Structured Probabilistic Inference & Generative
+                            Modeling (SPIGM
+                            2024).
+                        </p>
+                    </div>
+                    <div id="second">
+                        <a href="https://openreview.net/pdf?id=epOXthx0ea" style="text-decoration: none">
+                            <p id="rcorners1" style="text-align:center;"> <b>
+                                    <i class="fa-regular fa-file-pdf w3-hover-opacity"></i> Paper </b> </p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
+                <a href="https://twitter.com/LennertDS_" style="text-decoration: none" <i
+                    class="fa-brands fa-x-twitter w3-hover-opacity"></i><a>
+                        <a href="https://www.linkedin.com/in/lennert-de-smet-3dot1415926/" style="text-decoration: none"
+                            <i class="fa-brands fa-linkedin w3-hover-opacity"></i><a>
+                                <p class="w3-medium"><a href="https://www.flaticon.com/free-icons/wave"> Wave
+                                        icons
+                                        created by max.icons - Flaticon<a>.
+            </footer>
+
+            <!-- END PAGE CONTENT -->
         </div>
-        <div id="second">
-            <a href="https://differentiable.xyz/papers/paper_29.pdf" style="text-decoration: none"><p id="rcorners1" style="text-align:center;"> <b> Paper </b> </p> </a>
-        </div>
-    </div> -->
-
-    <!-- <div class="w3-content w3-justify w3-text w3-padding-64" id="code"></divclass>
-    <h2 class="w3-text-light-grey"> Code </h2>
-    <hr style="width:200px" class="w3-opacity"> -->
-</div>
-
-<!-- Footer -->
-<footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
-<a href="https://twitter.com/LennertDS_" style="text-decoration: none" <i class="fa-brands fa-x-twitter w3-hover-opacity"></i><a>
-<a href="https://www.linkedin.com/in/lennert-de-smet-3dot1415926/" style="text-decoration: none" <i class="fa-brands fa-linkedin w3-hover-opacity"></i><a>
-<p class="w3-medium"><a href="https://www.flaticon.com/free-icons/wave"> Wave icons created by max.icons - Flaticon<a>.
-</footer>
-
-<!-- END PAGE CONTENT -->
-</div>
 
 </body>
+
 </html>
