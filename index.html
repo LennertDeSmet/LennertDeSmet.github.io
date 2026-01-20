@@ -5,34 +5,39 @@
 
     <style>
         #rcorners1 {
-            border-radius: 10px;
+            border-radius: 0.5em;
             background: #434343;
             padding: 13px;
             width: 100px;
             height: 50px;
         }
+
+        .custom-hr {
+            width: 200px;
+            border-width: 1px;
+            border-style: solid;
+            border-radius: 0.5em;
+            border-color: rgb(105, 237, 255);
+        }
     </style>
 
     <style>
         a:hover {
-            color: #277da1;
+            color: rgb(105, 237, 255);
         }
     </style>
 
     <style>
         #wrapper {
             overflow: auto;
-            /* add this to contain floated children */
         }
 
         #first {
             float: left;
-            /* add this */
         }
 
         #second {
             float: right;
-            /* add this */
         }
 
         #background {
@@ -43,7 +48,7 @@
 
     <style>
         img {
-            border-radius: 2em;
+            border-radius: 0.5em;
         }
     </style>
 
@@ -54,20 +59,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Sans">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <style>
-        body,
         h1,
         h2,
         h3,
         h4,
         h5,
         h6 {
-            font-family: "Montserrat", sans-serif
+            font-family: "Lato", sans-serif;
+            font-weight: 400;
         }
 
-        /* body, h1,h2,h3,h4,h5,h6 {font-family: "Fira Sans"} */
+        body {
+            font-size: 18px;
+            font-family: "Lato", sans-serif;
+            font-weight: 300;
+        }
+
         .w3-row-padding img {
             margin-bottom: 12px
         }
@@ -99,14 +110,14 @@
         <!-- Header/Home -->
         <header class="w3-container w3-padding-32 w3-center" id="home">
             <h1> Lennert De Smet </h1>
-            <p style="padding-bottom:20px;"> PhD at the DTAI research group of the KU Leuven.</p>
+            <p style="padding-bottom:20px;"> Postdoc at the DTAI research group of the KU Leuven.</p>
             <img src="/images/cropped_me.jpg" class="w3-image" width="500">
         </header>
 
         <!-- About Section -->
         <div class="w3-content w3-justify w3-text w3-padding-64" id="about">
             <h2 class="w3-text-light-grey"> About Me </h2>
-            <hr style="width:200px" class="w3-opacity">
+            <hr class="custom-hr">
             <p>
                 Having studied and enjoyed many different forms of mathematics, from statistics and analysis to formal
                 logic and abstract algebra, my lifelong interest in modelling intelligence naturally pulled me to the
@@ -124,7 +135,7 @@
                 </divclass>
 
                 <h2 class="w3-text-light-grey"> Publications </h2>
-                <hr style="width:200px" class="w3-opacity">
+                <hr class="custom-hr">
 
                 <h3 class="w3-text-light-grey" style="text-align:left;"> Conference Papers </h3>
                 <div id="wrapper">
@@ -141,10 +152,19 @@
                             <a href="https://wms.cs.kuleuven.be/people/lucderaedt/" style="text-decoration: none"> De
                                 Raedt, L.</a>
                             (2023).
-                            <em> Neural Probilistic Logic Programming in Discrete-Continuous Domains.</em>
+                            <br>
+                            <em>
+                                Neural Probilistic Logic Programming in Discrete-Continuous Domains.
+                            </em>
+                            <br>
                             In Proceedings of the 39th Conference on Uncertainty in Artificial Intelligence (UAI).
                         </p>
                     </div>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
                     <div id="second">
                         <a href="https://proceedings.mlr.press/v216/de-smet23a/de-smet23a.pdf"
                             style="text-decoration: none">
@@ -176,6 +196,8 @@
                     </div>
                 </div>
 
+                <br>
+
                 <div id="wrapper">
                     <div id="first">
                         <p>
@@ -184,12 +206,20 @@
                             <a href="https://pedrozudo.github.io/" style="text-decoration: none"> Zuidberg Dos Martires,
                                 P.</a>
                             (2023).
-                            <em> Differentiable Sampling of Categorical Distributions Using the CatLog-Derivative
-                                Trick.</em>
+                            <br>
+                            <em>
+                                Differentiable Sampling of Categorical Distributions Using the CatLog-Derivative Trick.
+                            </em>
+                            <br>
                             In Proceedings of the 37th International Conference on Neural Information Processing Systems
                             (NeurIPS).
                         </p>
                     </div>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
                     <div id="second">
                         <a href="https://proceedings.neurips.cc/paper_files/paper/2023/file/61202bb341e7e0a6026ea134a5057abf-Paper-Conference.pdf"
                             style="text-decoration: none">
@@ -221,6 +251,8 @@
                     </div>
                 </div>
 
+                <br>
+
                 <div id="wrapper">
                     <div id="first">
                         <p>
@@ -230,10 +262,17 @@
                                 Raedt, L.</a>,
                             <a href="https://emsansone.github.io/" style="text-decoration: none"> Sansone, E.</a>
                             (2024).
+                            <br>
                             <em> EXPLAIN, AGREE, LEARN: Scaling Learning for Neural Probabilistic Logic.</em>
-                            ECAI 2024.
+                            <br>
+                            In Proceedings of the 27th European Conference on Artificial Intelligence (ECAI).
                         </p>
                     </div>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
                     <div id="second">
                         <a href="https://arxiv.org/pdf/2408.08133" style="text-decoration: none">
                             <p id="rcorners1" style="text-align:center;"> <b>
@@ -242,6 +281,8 @@
                     </div>
                 </div>
 
+                <br>
+
                 <div id="wrapper">
                     <div id="first">
                         <p>
@@ -249,16 +290,25 @@
                             <a href="https://pedrozudo.github.io/" style="text-decoration: none"> Zuidberg Dos Martires,
                                 P.</a>
                             (2024).
+                            <br>
                             <em> A Fast Convoluted Story: Scaling Probabilistic Inference for Integer Arithmetic.</em>
+                            <br>
                             In Proceedings of the 38th International Conference on Neural Information Processing Systems
                             (NeurIPS).
                         </p>
                     </div>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
                     <div id="second">
                         <a href="https://proceedings.neurips.cc/paper_files/paper/2024/file/b9a17133e3943509243b5e197c1c23b2-Paper-Conference.pdf"
                             style="text-decoration: none">
                             <p id="rcorners1" style="text-align:center;"> <b>
-                                    <i class="fa-regular fa-file-pdf w3-hover-opacity"></i> Paper </b> </p>
+                                    <i class="fa-regular fa-file-pdf w3-hover-opacity"></i> Paper
+                                </b>
+                            </p>
                         </a>
                     </div>
                     <div id="second">
@@ -285,6 +335,8 @@
                     </div>
                 </div>
 
+                <br>
+
                 <div id="wrapper">
                     <div id="first">
                         <p>
@@ -294,10 +346,17 @@
                                 Raedt, L.</a>,
                             <a href="https://www.giuseppemarra.com/" style="text-decoration: none"> Marra, G.</a>
                             (2025).
+                            <br>
                             <em> Relational Neurosymbolic Markov Models.</em>
+                            <br>
                             In Proceedings of the 39th Annual AAAI Conference on Artificial Intelligence.
                         </p>
                     </div>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
                     <div id="second">
                         <a href="https://arxiv.org/pdf/2412.13023" style="text-decoration: none">
                             <p id="rcorners1" style="text-align:center;"> <b>
@@ -317,6 +376,8 @@
                     </div>
                 </div>
 
+                <br><br>
+
                 <h3 class="w3-text-light-grey" style="text-align:left;"> Preprints </h3>
 
                 <div id="wrapper">
@@ -327,6 +388,7 @@
                                 De Raedt, L.
                             </a>
                             (2025).
+                            <br>
                             <em>
                                 Defining neurosymbolic AI.
                             </em>
@@ -341,6 +403,8 @@
                         </a>
                     </div>
                 </div>
+
+                <br><br>
 
                 <div id="wrapper">
                     <div id="first">
@@ -365,6 +429,7 @@
                                 De Raedt, L.
                             </a>
                             (2025).
+                            <br>
                             <em>
                                 The DeepLog Neurosymbolic Machine.
                             </em>
@@ -380,6 +445,7 @@
                     </div>
                 </div>
 
+                <br><br>
 
                 <h3 class="w3-text-light-grey" style="text-align:left;"> Workshop Papers</h3>
 
@@ -394,11 +460,15 @@
                             <a href="https://pedrozudo.github.io/" style="text-decoration: none"> Zuidberg Dos Martires,
                                 P.</a>
                             (2022).
-                            <em> Tensorised Probabilistic Inference for Neural Probabilistic Logic
-                                Programming.</em>
+                            <br>
+                            <em>
+                                Tensorised Probabilistic Inference for Neural Probabilistic Logic Programming.
+                            </em>
+                            <br>
                             In the 5th Workshop on Tractable Probabilistic Modeling (TPM).
                         </p>
                     </div>
+                    >
                     <div id="second">
                         <a href="https://openreview.net/pdf?id=6Kpbq2Y2IK6" style="text-decoration: none">
                             <p id="rcorners1" style="text-align:center;"> <b>
@@ -406,6 +476,8 @@
                         </a>
                     </div>
                 </div>
+
+                <br><br>
 
                 <div id="wrapper">
                     <div id="first">
@@ -419,11 +491,12 @@
                             <a href="https://jessa.github.io/" style="text-decoration: none"> Bekker,
                                 J.</a>,
                             (2023).
-                            <em> Inferring Missing CV Skills using PU Learning and Variational
-                                Inference.</em>
-                            In the ECML-PKDD 2023 International workshop on AI for Human Resources and
-                            Public
-                            Employment
+                            <br>
+                            <em>
+                                Inferring Missing CV Skills using PU Learning and Variational Inference.
+                            </em>
+                            <br>
+                            In the ECML-PKDD 2023 International workshop on AI for Human Resources and Public Employment
                             Services.
                         </p>
                     </div>
@@ -431,10 +504,14 @@
                         <a href="https://ai4hrpes.github.io/ecmlpkdd2023/papers/ai4hrpes2023_paper_152.pdf"
                             style="text-decoration: none">
                             <p id="rcorners1" style="text-align:center;"> <b>
-                                    <i class="fa-regular fa-file-pdf w3-hover-opacity"></i> Paper </b> </p>
+                                    <i class="fa-regular fa-file-pdf w3-hover-opacity"></i> Paper
+                                </b>
+                            </p>
                         </a>
                     </div>
                 </div>
+
+                <br><br>
 
                 <div id="wrapper">
                     <div id="first">
@@ -448,9 +525,12 @@
                             <a href="https://wms.cs.kuleuven.be/people/lucderaedt/" style="text-decoration: none"> De
                                 Raedt, L.</a>,
                             (2024).
-                            <em> Neurosymbolic Markov Models.</em>
-                            In the ICML 2024 Workshop on Structured Probabilistic Inference & Generative
-                            Modeling (SPIGM
+                            <br>
+                            <em>
+                                Neurosymbolic Markov Models.
+                            </em>
+                            <br>
+                            In the ICML 2024 Workshop on Structured Probabilistic Inference & Generative Modeling (SPIGM
                             2024).
                         </p>
                     </div>
