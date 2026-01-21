@@ -1,0 +1,125 @@
+/* Body and Base Typography */
+body {
+    font-size: 18px;
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+}
+
+/* Base Layout and Colors */
+#background {
+    color: #efefef;
+    background-color: #111111;
+}
+
+a:hover {
+    color: rgb(105, 237, 255);
+}
+
+img {
+    border-radius: 0.5em;
+}
+
+/* Custom UI Elements */
+#rcorners1 {
+    border-radius: 0.5em;
+    background: #434343;
+    padding: 13px;
+    width: 100px;
+    height: 50px;
+}
+
+.custom-hr {
+    width: 200px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 0.5em;
+    border-color: rgb(105, 237, 255);
+}
+
+/* Wrapper Layout (used in JS rendered content) */
+#wrapper {
+    overflow: auto;
+}
+
+#first {
+    float: left;
+}
+
+#second {
+    float: right;
+}
+
+/* W3C Overrides and Specifics */
+.w3-row-padding img {
+    margin-bottom: 12px;
+}
+
+.w3-sidebar {
+    width: 120px;
+    background: #222;
+}
+
+/* Responsive adjustments */
+@media only screen and (max-width: 600px) {
+    #main {
+        margin-left: 0;
+    }
+
+    #background {
+        background-color: #000000;
+    }
+}
+
+/* Navigation Bar */
+#navbar {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.nav-link {
+    text-decoration: none;
+    margin-right: 20px;
+    color: #999;
+    font-weight: 300;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: rgb(105, 237, 255);
+}
+
+/* Timeline specific styles */
+.timeline-item {
+    margin-bottom: 20px;
+    border-left: 2px solid #555;
+    padding-left: 20px;
+    position: relative;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -6px;
+    top: 5px;
+    width: 10px;
+    height: 10px;
+    background-color: rgb(105, 237, 255);
+    border-radius: 50%;
+}
+
+.timeline-date {
+    font-size: 0.9em;
+    color: #bbb;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.timeline-content {
+    color: #efefef;
+}

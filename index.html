@@ -2,58 +2,7 @@
 <html>
 
 <head>
-
-    <style>
-        #rcorners1 {
-            border-radius: 0.5em;
-            background: #434343;
-            padding: 13px;
-            width: 100px;
-            height: 50px;
-        }
-
-        .custom-hr {
-            width: 200px;
-            border-width: 1px;
-            border-style: solid;
-            border-radius: 0.5em;
-            border-color: rgb(105, 237, 255);
-        }
-    </style>
-
-    <style>
-        a:hover {
-            color: rgb(105, 237, 255);
-        }
-    </style>
-
-    <style>
-        #wrapper {
-            overflow: auto;
-        }
-
-        #first {
-            float: left;
-        }
-
-        #second {
-            float: right;
-        }
-
-        #background {
-            color: #efefef;
-            background-color: #111111;
-        }
-    </style>
-
-    <style>
-        img {
-            border-radius: 0.5em;
-        }
-    </style>
-
     <link rel="icon" href="/images/wave.png">
-
     <title> Lennert De Smet </title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -62,51 +11,19 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <style>
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-            font-family: "Lato", sans-serif;
-            font-weight: 400;
-        }
 
-        body {
-            font-size: 18px;
-            font-family: "Lato", sans-serif;
-            font-weight: 300;
-        }
-
-        .w3-row-padding img {
-            margin-bottom: 12px
-        }
-
-        /* Set the width of the sidebar to 120px */
-        .w3-sidebar {
-            width: 120px;
-            background: #222;
-        }
-
-        /* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
-        /* Remove margins from "page content" on small screens */
-        @media only screen and (max-width: 600px) {
-            #main {
-                margin-left: 0
-            }
-
-            #background {
-                background-color: #000000;
-            }
-        }
-    </style>
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body id="background">
 
     <!-- Page Content -->
     <div class="w3-padding-large" id="main">
+
+        <!-- Navigation Bar -->
+        <div id="navbar"></div>
+
         <!-- Header/Home -->
         <header class="w3-container w3-padding-32 w3-center" id="home">
             <h1> Lennert De Smet </h1>
@@ -130,43 +47,58 @@
                 My research is focused on improving the scalability of probabilistic NeSy methods, both for
                 exact and approximate inference and learning.
             </p>
+        </div>
 
-            <div class="w3-content w3-justify w3-text w3-padding-64" id="publications">
-                <h2 class="w3-text-light-grey"> Publications </h2>
-                <hr class="custom-hr">
+        <!-- Timeline Section -->
+        <div class="w3-content w3-justify w3-text w3-padding-64" id="timeline">
+            <h2 class="w3-text-light-grey"> Timeline </h2>
+            <hr class="custom-hr">
 
-                <h3 class="w3-text-light-grey" style="text-align:left;"> Conference Papers </h3>
-                <div id="conference-papers"></div>
-
-                <br>
-
-                <h3 class="w3-text-light-grey" style="text-align:left;"> Preprints </h3>
-                <div id="preprints"></div>
-
-                <br>
-
-                <h3 class="w3-text-light-grey" style="text-align:left;"> Workshop Papers</h3>
-                <div id="workshop-papers"></div>
-
+            <div class="timeline-item">
+                <span class="timeline-date">Present</span>
+                <div class="timeline-content">
+                    Postdoctoral Researcher at DTAI, KU Leuven.
+                </div>
             </div>
 
-            <script src="assets/js/publications.js"></script>
-            <script src="assets/js/main.js"></script>
+            <div class="timeline-item">
+                <span class="timeline-date">2025</span>
+                <div class="timeline-content">
+                    Obtained PhD in Artificial Intelligence from KU Leuven.
+                </div>
+            </div>
 
-            <!-- Footer -->
-            <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
-                <a href="https://twitter.com/LennertDS_" style="text-decoration: none">
-                    <i class="fa-brands fa-x-twitter w3-hover-opacity"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/lennert-de-smet-3dot1415926/" style="text-decoration: none">
-                    <i class="fa-brands fa-linkedin w3-hover-opacity"></i>
-                </a>
-                <p class="w3-medium"><a href="https://www.flaticon.com/free-icons/wave"> Wave icons created by max.icons
-                        - Flaticon</a>.</p>
-            </footer>
+            <div class="timeline-item">
+                <span class="timeline-date">2025</span>
+                <div class="timeline-content">
+                    Paper "Relational Neurosymbolic Markov Models" accepted at AAAI 2025.
+                </div>
+            </div>
 
-            <!-- END PAGE CONTENT -->
+            <div class="timeline-item">
+                <span class="timeline-date">2024</span>
+                <div class="timeline-content">
+                    Paper accepted at NeurIPS 2024.
+                </div>
+            </div>
         </div>
+
+        <script src="assets/js/navbar.js"></script>
+
+        <!-- Footer -->
+        <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
+            <a href="https://twitter.com/LennertDS_" style="text-decoration: none">
+                <i class="fa-brands fa-x-twitter w3-hover-opacity"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/lennert-de-smet-3dot1415926/" style="text-decoration: none">
+                <i class="fa-brands fa-linkedin w3-hover-opacity"></i>
+            </a>
+            <p class="w3-medium"><a href="https://www.flaticon.com/free-icons/wave"> Wave icons created by max.icons
+                    - Flaticon</a>.</p>
+        </footer>
+
+        <!-- END PAGE CONTENT -->
+    </div>
 
 </body>
 
