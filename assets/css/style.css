@@ -5,7 +5,12 @@ body {
     font-weight: 300;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: "Lato", sans-serif;
     font-weight: 400;
 }
@@ -90,7 +95,8 @@ img {
     transition: color 0.3s;
 }
 
-.nav-link:hover, .nav-link.active {
+.nav-link:hover,
+.nav-link.active {
     color: rgb(105, 237, 255);
 }
 
@@ -120,6 +126,7 @@ img {
     display: block;
 }
 
-.timeline-content {
-    color: #efefef;
+/* Utility Classes */
+.text-highlight {
+    color: rgb(105, 237, 255);
 }

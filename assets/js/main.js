@@ -71,4 +71,62 @@ document.addEventListener('DOMContentLoaded', () => {
         renderPublications(publicationsData.preprints, 'preprints');
         renderPublications(publicationsData.workshop_papers, 'workshop-papers');
     }
+
+    if (typeof timelineData !== 'undefined') {
+        renderTimeline(timelineData, 'timeline-container');
+    }
 });
+
+function renderTimeline(data, containerId) {
+    const container = document.getElementById(containerId);
+    if (!container || !data) return;
+
+    // Helper to parse date string into a comparable value and a display string
+    const parseDate = (dateStr) => {
+        if (dateStr.toLowerCase() === 'present') {
+            return { value: new Date().getTime() + 1000000, display: 'Present' }; // Future for sorting
+        }
+
+        const parts = dateStr.split('-');
+        let dateObj, options;
+
+        if (parts.length === 3) {
+            // YYYY-MM-DD
+            dateObj = new Date(dateStr);
+            options = { year: 'numeric', month: 'short', day: 'numeric' };
+        } else if (parts.length === 2) {
+            // YYYY-MM
+            dateObj = new Date(dateStr + '-01');
+            options = { year: 'numeric', month: 'short' };
+        } else {
+            // YYYY
+            return { value: parseInt(dateStr), display: dateStr };
+        }
+
+        // Handle timezone issues by using UTC parts or just simple formatting since we care about display
+        // Actually, for display:
+        const formatter = new Intl.DateTimeFormat('en-US', options);
+        return { value: dateObj.getTime(), display: formatter.format(dateObj) };
+    };
+
+    // Sort data descending
+    data.sort((a, b) => {
+        const dateA = parseDate(a.date).value;
+        const dateB = parseDate(b.date).value;
+        return dateB - dateA;
+    });
+
+    data.forEach(item => {
+        const { display } = parseDate(item.date);
+
+        const div = document.createElement('div');
+        div.className = 'timeline-item';
+        div.innerHTML = `
+            <span class="timeline-date">${display}</span>
+            <div class="timeline-content">
+                ${item.content}
+            </div>
+        `;
+        container.appendChild(div);
+    });
+}
